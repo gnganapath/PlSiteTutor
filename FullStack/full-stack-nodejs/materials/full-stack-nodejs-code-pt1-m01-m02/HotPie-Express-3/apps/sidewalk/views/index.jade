@@ -1,0 +1,9 @@
+extends ../../../views/layout
+
+block content
+  ul
+    each pie in pies
+      li(class=[helpers.cssClassForPieAge(pie), pie.type])
+        = pie.name
+        span.status
+          = helpers.wordsForPieAge(pie)

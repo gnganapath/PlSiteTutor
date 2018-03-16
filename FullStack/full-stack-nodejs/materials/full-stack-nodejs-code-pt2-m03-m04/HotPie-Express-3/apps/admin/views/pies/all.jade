@@ -1,0 +1,11 @@
+extends ../../../../views/layout
+
+block content
+  ul#listing
+    each pie in pies
+      li(class=pie.type)= pie.name
+        // Uncomment to implement editing
+          span.edit
+            a(href='/admin/pies/edit/') Edit
+
+  include _form
